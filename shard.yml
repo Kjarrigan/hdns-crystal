@@ -1,0 +1,13 @@
+name: hetzner-dns
+version: 0.1.0
+
+authors:
+  - Kjarrigan <github@kjarrigan.de>
+
+targets:
+  hdns:
+    main: exe/hdns.cr
+
+crystal: 1.4.1
+
+license: MIT
