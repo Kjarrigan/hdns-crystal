@@ -1,7 +1,10 @@
-require "./version"
-require "./zone"
 require "json"
 require "http/client"
+
+require "./version"
+require "./time"
+require "./zone"
+require "./record"
 
 module Hetzner
   module DNS
@@ -26,6 +29,10 @@ module Hetzner
 
       def zones
         ZoneClient.new(self)
+      end
+
+      def records
+        RecordClient.new(self)
       end
 
       def get(path)

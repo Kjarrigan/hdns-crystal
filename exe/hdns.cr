@@ -1,4 +1,5 @@
 require "../src/hetzner/dns"
 
 client = Hetzner::DNS::Client.new ENV["HDNS_TOKEN"]
-p client.zones.all
+# puts client.zones.all.to_json
+puts client.records.all.to_json
